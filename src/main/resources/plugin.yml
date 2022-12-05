@@ -1,0 +1,37 @@
+name: Kernel
+version: '${project.version}'
+main: me.torovoro.kernel.Kernel
+api-version: 1.19
+commands:
+  broadcast:
+    description: Send a message to the server!
+    permission: kernel.broadcast
+    permission-message: §cNo permissions.
+    aliases: [alert, bc]
+  clear:
+    description: Clear your inventory.
+    permission: kernel.clear
+    permission-message: §cNo permissions.
+    aliases: [ci, clearinventory]
+  level:
+    description: View commands relating to exp/levels.
+    permission: kernel.level
+    permission-message: §cNo permissions.
+    aliases: [levels]
+  gamemode:
+    description: Set the gamemode of a player.
+    permission: kernel.gamemode
+    permission-message: §cNo permissions.
+    aliases: [gm]
+  gmc:
+    description: Set the gamemode of a player to creative.
+    permission: kernel.gmc
+    permission-message: §cNo permissions.
+  gms:
+    description: Set the gamemode of a player to survival.
+    permission: kernel.gms
+    permission-message: §cNo permissions.
+  gmsp:
+    description: Set the gamemode of a player to survival.
+    permission: kernel.gmsp
+    permission-message: §cNo permissions.
