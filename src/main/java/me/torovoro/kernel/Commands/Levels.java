@@ -53,7 +53,15 @@ public class Levels implements CommandExecutor {
                     break;
                 }
             case "add":
-                if(args.length > 2) {
+                if(args.length == 1) {
+                    Player player = (Player) sender;
+                    player.sendMessage("§6§l* §7Usage: §e/level add (amount) (player)");
+                    break;
+                } else if(args.length == 2) {
+                    Player player = (Player) sender;
+                    player.sendMessage("§6§l* §7Usage: §e/level add (amount) (player)");
+                    break;
+                } else {
                     Player player = (Player) sender;
                     Player p = player.getServer().getPlayer(args[2]);
                     if(p == null) {
@@ -65,9 +73,26 @@ public class Levels implements CommandExecutor {
                         player.sendMessage("§6§l* §e" + args[2] + "'s §7level is now §e" + newExp + ".");
                     }
                     break;
+                }
+            case "set":
+                if(args.length == 1) {
+                    Player player = (Player) sender;
+                    player.sendMessage("§6§l* §7Usage: §e/level set (amount) (player)");
+                    break;
                 } else if(args.length == 2) {
                     Player player = (Player) sender;
-                    player.sendMessage("§6§l* §7Usage: §e/level add (amount) (player)");
+                    player.sendMessage("§6§l* §7Usage: §e/level set (amount) (player)");
+                    break;
+                } else {
+                    Player player = (Player) sender;
+                    Player p = player.getServer().getPlayer(args[2]);
+                    if(p == null) {
+                        player.sendMessage("§6§l* §7That player is not online or does not exist.");
+                    } else {
+                        int newExp = Integer.parseInt(args[1]);
+                        p.setLevel(newExp);
+                        player.sendMessage("§6§l* §e" + args[2] + "'s §7level is now §e" + newExp + ".");
+                    }
                     break;
                 }
         }

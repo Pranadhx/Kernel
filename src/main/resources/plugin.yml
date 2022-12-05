@@ -17,7 +17,7 @@ commands:
     description: View commands relating to exp/levels.
     permission: kernel.level
     permission-message: §cNo permissions.
-    aliases: [levels]
+    aliases: [lvl, levels]
   gamemode:
     description: Set the gamemode of a player.
     permission: kernel.gamemode
