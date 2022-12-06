@@ -1,9 +1,7 @@
 package me.torovoro.kernel;
 
 import me.torovoro.kernel.Commands.*;
-import me.torovoro.kernel.Events.LaunchPad;
-import me.torovoro.kernel.Events.PlayerJoinLeave;
-import me.torovoro.kernel.Events.TemporaryTestHit;
+import me.torovoro.kernel.Events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,6 +13,8 @@ public final class Kernel extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoinLeave(), this);
         getServer().getPluginManager().registerEvents(new TemporaryTestHit(), this);
         getServer().getPluginManager().registerEvents(new LaunchPad(), this);
+        getServer().getPluginManager().registerEvents(new ScoreboardInitialize(), this);
+        getServer().getPluginManager().registerEvents(new DashSword(), this);
         getCommand("broadcast").setExecutor(new Broadcast());
         getCommand("clear").setExecutor(new ClearInventory());
         getCommand("level").setExecutor(new Levels());

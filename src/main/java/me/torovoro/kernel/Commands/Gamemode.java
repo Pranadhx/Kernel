@@ -14,7 +14,7 @@ public class Gamemode implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 if (args.length < 1) {
-                    player.sendMessage("§6§l* §7Usage: §e/gamemode (creative, survival, spectator)");
+                    player.sendMessage("§6§l* §7Usage: §e/gamemode (creative, survival, spectator) (player)");
                     return true;
                 }
                 if (args.length == 1) {

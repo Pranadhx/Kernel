@@ -1,6 +1,6 @@
 package me.torovoro.kernel.Commands;
 
-import me.torovoro.kernel.Kernel;
+import me.torovoro.kernel.Utils.ColorUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -21,7 +21,7 @@ public class Broadcast implements CommandExecutor {
                 }
                 String bc = String.join(" ", args);
                 bc = ChatColor.translateAlternateColorCodes('&', bc);
-                Bukkit.getServer().broadcastMessage("§6§lALERT §e| §7" + bc);
+                Bukkit.getServer().broadcastMessage(ColorUtils.translateColorCodes("&#fce9b6&lA&#fde2ad&lL&#fedca3&lE&#fed59a&lR&#ffce90&lT &e| &7" + bc));
                 }
             }
         return true;
