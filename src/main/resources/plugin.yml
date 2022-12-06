@@ -58,3 +58,5 @@ commands:
     permission: kernel.teleport
     permission-message: §cNo permissions.
     aliases: [teleport]
+  kernel:
+    description: Version and help menu.

@@ -27,6 +27,7 @@ public final class Kernel extends JavaPlugin {
         getCommand("kick").setExecutor(new Kick());
         getCommand("cleardrops").setExecutor(new KillDrops());
         getCommand("tp").setExecutor(new Teleport());
+        getCommand("kernel").setExecutor(new Help());
     }
 
     @Override
