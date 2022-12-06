@@ -53,3 +53,8 @@ commands:
     permission: kernel.cleardrops
     permission-message: §cNo permissions.
     aliases: [killdrops, killitems]
+  tp:
+    description: Teleport to another player.
+    permission: kernel.teleport
+    permission-message: §cNo permissions.
+    aliases: [teleport]

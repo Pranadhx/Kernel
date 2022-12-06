@@ -1,7 +1,6 @@
 package me.torovoro.kernel.Commands;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -20,13 +19,15 @@ public class ClearInventory implements CommandExecutor {
                     return true;
                 }
                 if(args.length == 1) {
-                    Player p = player.getServer().getPlayer(args[0]);
+                    Player p = Bukkit.getPlayer(args[0]);
                     if(p == null) {
                         player.sendMessage("§6§l* §7That player is not online or does not exist.");
+                    } else {
+                        p.getInventory().clear();
+                        p.updateInventory();
+                        player.sendMessage("§6§l* §e" + p.getDisplayName() + "'s §7inventory §7has been §ecleared.");
+                        return true;
                     }
-                    p.getInventory().clear();
-                    p.updateInventory();
-                    player.sendMessage("§6§l* §e" + p.getDisplayName() + "'s §7inventory §7has been §ecleared.");
                 }
                 if(args.length > 1) {
                     player.sendMessage("§6§l* §7Usage: §e/clear (player)");
