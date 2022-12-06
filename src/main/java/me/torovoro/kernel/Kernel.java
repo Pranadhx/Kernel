@@ -1,13 +1,9 @@
 package me.torovoro.kernel;
 
-import me.torovoro.kernel.Commands.Broadcast;
-import me.torovoro.kernel.Commands.ClearInventory;
-import me.torovoro.kernel.Commands.Gamemode;
-import me.torovoro.kernel.Commands.Levels;
+import me.torovoro.kernel.Commands.*;
 import me.torovoro.kernel.Events.PlayerJoinLeave;
 import me.torovoro.kernel.Events.TemporaryTestHit;
 import org.bukkit.Bukkit;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Kernel extends JavaPlugin {
@@ -24,9 +20,8 @@ public final class Kernel extends JavaPlugin {
         getCommand("gmc").setExecutor(new Gamemode());
         getCommand("gms").setExecutor(new Gamemode());
         getCommand("gmsp").setExecutor(new Gamemode());
-
+        getCommand("fly").setExecutor(new Fly());
     }
-
 
     @Override
     public void onDisable() {

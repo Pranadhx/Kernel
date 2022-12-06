@@ -35,3 +35,7 @@ commands:
     description: Set the gamemode of a player to survival.
     permission: kernel.gmsp
     permission-message: §cNo permissions.
+  fly:
+    description: Set the flight mode of a player.
+    permission: kernel.fly
+    permission-message: §cNo permissions.
