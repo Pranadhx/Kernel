@@ -23,6 +23,7 @@ public final class Kernel extends JavaPlugin {
         getCommand("fly").setExecutor(new Fly());
         getCommand("vanish").setExecutor(new Vanish());
         getCommand("kick").setExecutor(new Kick());
+        getCommand("cleardrops").setExecutor(new KillDrops());
     }
 
     @Override

@@ -48,3 +48,8 @@ commands:
     description: Kick a player with a message.
     permission: kernel.kick
     permission-message: §cNo permissions.
+  cleardrops:
+    description: Clear all drops.
+    permission: kernel.cleardrops
+    permission-message: §cNo permissions.
+    aliases: [killdrops, killitems]
