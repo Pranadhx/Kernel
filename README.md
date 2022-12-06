@@ -9,7 +9,8 @@ gradient is #FCE9B6 to #FFCE90
 - [x] work on scoreboard
 - [ ] work on weapon command + put it into the main file
 - [ ] potentially figure out config if bothered
+- [ ] speed/god/heal/togglefalldamage command
 
 ## CANCELLED:
 
-- [ ] ~~work on green and dark gray colour format~~
+~~work on green and dark gray colour format~~
