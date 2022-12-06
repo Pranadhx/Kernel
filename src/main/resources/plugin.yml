@@ -39,3 +39,12 @@ commands:
     description: Set the flight mode of a player.
     permission: kernel.fly
     permission-message: §cNo permissions.
+  vanish:
+    description: Set the visbility mode of a player.
+    permission: kernel.vanish
+    permission-message: §cNo permissions.
+    aliases: [hide]
+  kick:
+    description: Kick a player with a message.
+    permission: kernel.kick
+    permission-message: §cNo permissions.

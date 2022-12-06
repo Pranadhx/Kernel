@@ -21,6 +21,8 @@ public final class Kernel extends JavaPlugin {
         getCommand("gms").setExecutor(new Gamemode());
         getCommand("gmsp").setExecutor(new Gamemode());
         getCommand("fly").setExecutor(new Fly());
+        getCommand("vanish").setExecutor(new Vanish());
+        getCommand("kick").setExecutor(new Kick());
     }
 
     @Override
