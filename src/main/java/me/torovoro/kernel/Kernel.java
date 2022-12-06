@@ -1,6 +1,7 @@
 package me.torovoro.kernel;
 
 import me.torovoro.kernel.Commands.*;
+import me.torovoro.kernel.Events.LaunchPad;
 import me.torovoro.kernel.Events.PlayerJoinLeave;
 import me.torovoro.kernel.Events.TemporaryTestHit;
 import org.bukkit.Bukkit;
@@ -13,6 +14,7 @@ public final class Kernel extends JavaPlugin {
         Bukkit.getLogger().info("Kernel has loaded.");
         getServer().getPluginManager().registerEvents(new PlayerJoinLeave(), this);
         getServer().getPluginManager().registerEvents(new TemporaryTestHit(), this);
+        getServer().getPluginManager().registerEvents(new LaunchPad(), this);
         getCommand("broadcast").setExecutor(new Broadcast());
         getCommand("clear").setExecutor(new ClearInventory());
         getCommand("level").setExecutor(new Levels());
