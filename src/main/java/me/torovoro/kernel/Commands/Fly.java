@@ -1,5 +1,6 @@
 package me.torovoro.kernel.Commands;
 
+import me.torovoro.kernel.Utils.ColorUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -13,32 +14,29 @@ public class Fly implements CommandExecutor {
         if(command.getName().equalsIgnoreCase("fly")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
-                if(args.length < 1) {
+                if(args.length == 0) {
                     if(player.getAllowFlight()) {
                         player.setAllowFlight(false);
-                        player.sendMessage("§6§l* §eFlight §7is now §cdisabled.");
+                        player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#ccc695Flight &7is now &cdisabled."));
                         return true;
                     } else {
                         player.setAllowFlight(true);
-                        player.sendMessage("§6§l* §eFlight §7is now §aenabled.");
+                        player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#ccc695Flight &7is now &aenabled."));
                         return true;
                     }
                 }
                 if(args.length == 1) {
                     Player p = player.getServer().getPlayer(args[0]);
                     if(p == null) {
-                        player.sendMessage("§6§l* §7That player is not online or does not exist.");
+                        player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &7That player is not online or does not exist."));
                     } else if(p.getAllowFlight()) {
                         p.setAllowFlight(false);
-                        p.sendMessage("§6§l* §eFlight §7is now §cdisabled.");
+                        p.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#39ff14Flight &#585858is now &cdisabled."));
                     } else {
                         p.setAllowFlight(true);
-                        p.sendMessage("§6§l* §eFlight §7is now §aenabled.");
+                        p.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#ccc695Flight &7is now &aenabled."));
                     }
                     return true;
-                }
-                if(args.length > 1) {
-                    player.sendMessage("§6§l* §7Usage: §e/fly (player)");
                 }
             }
         }
