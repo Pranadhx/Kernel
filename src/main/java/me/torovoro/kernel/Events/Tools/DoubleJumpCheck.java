@@ -28,7 +28,7 @@ public class DoubleJumpCheck implements Listener {
 
         Player player = event.getPlayer();
 
-        if (player.getGameMode() != GameMode.CREATIVE && player.getLocation().subtract(0.0, 2.0, 0.0).getBlock().getType() != Material.AIR && !player.isFlying()) {
+        if (player.getGameMode() != GameMode.CREATIVE && player.getLocation().subtract(0.0, 0.5, 0.0).getBlock().getType() != Material.AIR && !player.isFlying() && player.getInventory().getBoots().getItemMeta().getCustomModelData() == 3) {
             player.setAllowFlight(true);
         }
     }
