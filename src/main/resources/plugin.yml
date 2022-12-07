@@ -64,3 +64,5 @@ commands:
     permission-message: §cNo permissions.
   kernel:
     description: Version and help menu.
+  weapon:
+    description: Spawn in a custom weapon.

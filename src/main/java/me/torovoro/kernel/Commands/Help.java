@@ -19,7 +19,7 @@ public class Help implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 if(args.length < 1) {
-                    player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &7Running &#fce9b6&lK&#fde4ae&lE&#fddea7&lR&#fed99f&lN&#fed398&lE&#ffce90&lL &#ccc695v1.0.\n&#968863&l* &7Use &#fce9b6/kernel help &7to view all commands.\n&#968863&l* &7To reload the console, use &#fce9b6/kernel reload."));
+                    player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &7Running &#fce9b6&lK&#fde4ae&lE&#fddea7&lR&#fed99f&lN&#fed398&lE&#ffce90&lL &#ccc695v1.0.\n&#968863&l* &7Use &#fce9b6/kernel help &7to view all commands.\n&#968863&l* &7To reload the config, use &#fce9b6/kernel reload."));
                 } else if(args[0].equals("reload")) {
                     plugin.reloadConfig();
                     player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#fce9b6Config &7has been &#fce9b6reloaded!"));

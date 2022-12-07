@@ -1,6 +1,5 @@
 package me.torovoro.kernel.Events;
 
-import me.torovoro.kernel.Utils.ColorUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -16,7 +15,7 @@ public class DashSword implements Listener {
             return;
         if(!event.getItem().getType().equals(Material.IRON_SWORD))
             return;
-        if(!event.getItem().getItemMeta().getDisplayName().equals(ColorUtils.translateColorCodes("&b&lDash Sword")))
+        if(event.getItem().getItemMeta().getCustomModelData() != 3)
             return;
         player.setVelocity(player.getLocation().getDirection().multiply(2).setY(1));
     }

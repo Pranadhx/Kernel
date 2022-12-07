@@ -16,6 +16,7 @@ public final class Kernel extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new LaunchPad(), this);
         getServer().getPluginManager().registerEvents(new ScoreboardInitialize(), this);
         getServer().getPluginManager().registerEvents(new DashSword(), this);
+        getServer().getPluginManager().registerEvents(new TNTRod(), this);
         getCommand("broadcast").setExecutor(new Broadcast());
         getCommand("clear").setExecutor(new ClearInventory());
         getCommand("level").setExecutor(new Levels());
@@ -30,6 +31,7 @@ public final class Kernel extends JavaPlugin {
         getCommand("tp").setExecutor(new Teleport());
         getCommand("kernel").setExecutor(new Help());
         getCommand("clearchat").setExecutor(new ClearChat());
+        getCommand("weapon").setExecutor(new Weapon());
     }
 
     @Override
