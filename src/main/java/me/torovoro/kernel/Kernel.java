@@ -9,7 +9,6 @@ public final class Kernel extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Bukkit.getLogger().info("Kernel has loaded.");
         getConfig().options().copyDefaults();
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new PlayerJoinLeave(), this);
@@ -30,6 +29,7 @@ public final class Kernel extends JavaPlugin {
         getCommand("cleardrops").setExecutor(new KillDrops());
         getCommand("tp").setExecutor(new Teleport());
         getCommand("kernel").setExecutor(new Help());
+        getCommand("clearchat").setExecutor(new ClearChat());
     }
 
     @Override

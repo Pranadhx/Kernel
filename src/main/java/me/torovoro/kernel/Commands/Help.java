@@ -19,7 +19,7 @@ public class Help implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 if(args.length < 1) {
-                    player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &7Running &#fce9b6&lK&#fde4ae&lE&#fddea7&lR&#fed99f&lN&#fed398&lE&#ffce90&lL &#ccc695v1.0.\n&#968863&l* &7Use &#ccc695/kernel help &7to view all commands."));
+                    player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &7Running &#fce9b6&lK&#fde4ae&lE&#fddea7&lR&#fed99f&lN&#fed398&lE&#ffce90&lL &#ccc695v1.0.\n&#968863&l* &7Use &#fce9b6/kernel help &7to view all commands.\n&#968863&l* &7To reload the console, use &#fce9b6/kernel reload."));
                 } else if(args[0].equals("reload")) {
                     plugin.reloadConfig();
                     player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#fce9b6Config &7has been &#fce9b6reloaded!"));
@@ -30,6 +30,7 @@ public class Help implements CommandExecutor {
                     player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#fce9b6/level &8- &7View all commands related to levels."));
                     player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#fce9b6/clear | /ci (player) &8- &7Clear your inventory."));
                     player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#fce9b6/cleardrops &8- &7Clear all dropped entities."));
+                    player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#fce9b6/clearchat &8- &7Clear the chat."));
                     player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#fce9b6/fly (player) &8- &7Disable/enable flight mode."));
                     player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#fce9b6/gm(c|s|sp) | /gamemode &8- &7View commands related to gamemode."));
                     player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#fce9b6/kick (player) &8- &7Kick a player from the server."));

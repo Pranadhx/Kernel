@@ -58,5 +58,9 @@ commands:
     permission: kernel.teleport
     permission-message: §cNo permissions.
     aliases: [teleport]
+  clearchat:
+    description: Clear the chat.
+    permission: kernel.clearchat
+    permission-message: §cNo permissions.
   kernel:
     description: Version and help menu.

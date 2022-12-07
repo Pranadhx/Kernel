@@ -2,4 +2,7 @@ broadcast_usage: "&#968863&l* &7Usage: &#ccc695/broadcast (text)"
 
 clear_self: "&#968863&l* &7Your &#ccc695inventory &7has been &#ccc695cleared."
 clear_other: "&#968863&l* &#ccc695{player}'s &7inventory has been &#ccc695cleared."
+
+clearchat_message: "&#968863&l* &7The &#ccc695chat &7has been &#ccc695cleared &7by &#ccc695{player}!"
+
 player_not_exist: "&#968863&l* &7That player is not online or does not exist."
