@@ -1,4 +1,4 @@
-package me.torovoro.kernel.Events;
+package me.torovoro.kernel.Events.Tools;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

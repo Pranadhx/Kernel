@@ -1,4 +1,4 @@
-package me.torovoro.kernel.Events;
+package me.torovoro.kernel.Events.Tools;
 
 import com.jeff_media.armorequipevent.ArmorEquipEvent;
 import com.jeff_media.armorequipevent.ArmorType;
@@ -26,7 +26,6 @@ public class DoubleJumpBoots implements Listener {
 
         if(newBoots != null) {
             if(newBoots.getItemMeta().getCustomModelData() == 3) {
-                player.setAllowFlight(true);
                 player.sendMessage(ColorUtils.translateColorCodes(equip_doublejump_boots));
             }
         }

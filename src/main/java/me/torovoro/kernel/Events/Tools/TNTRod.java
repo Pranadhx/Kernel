@@ -1,4 +1,4 @@
-package me.torovoro.kernel.Events;
+package me.torovoro.kernel.Events.Tools;
 
 import me.torovoro.kernel.Kernel;
 import org.bukkit.Location;
@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.TNTPrimed;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.plugin.Plugin;
@@ -36,5 +37,16 @@ public class TNTRod implements Listener {
         Vector v = location.getDirection().multiply(2);
         // Apply vector to primed TNT
         tnt.setVelocity(v);
+    }
+    
+    @EventHandler
+    public void Explode(EntityExplodeEvent event) {
+
+        boolean tnt_explosions = plugin.getConfig().getBoolean("tnt_explosions");
+
+        if(tnt_explosions) {
+            return;
+        }
+        event.blockList().clear();
     }
 }

@@ -2,6 +2,7 @@ package me.torovoro.kernel;
 
 import me.torovoro.kernel.Commands.*;
 import me.torovoro.kernel.Events.*;
+import me.torovoro.kernel.Events.Tools.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.jeff_media.armorequipevent.ArmorEquipEvent;
@@ -17,7 +18,6 @@ public final class Kernel extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new LaunchPad(), this);
         getServer().getPluginManager().registerEvents(new ScoreboardInitialize(), this);
         getServer().getPluginManager().registerEvents(new DashSword(), this);
-        getServer().getPluginManager().registerEvents(new PrimedTNT(), this);
         getServer().getPluginManager().registerEvents(new TNTRod(), this);
         getServer().getPluginManager().registerEvents(new DoubleJumpCheck(), this);
         getServer().getPluginManager().registerEvents(new DoubleJumpBoots(), this);

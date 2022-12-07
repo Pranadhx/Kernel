@@ -1,4 +1,4 @@
-package me.torovoro.kernel.Events;
+package me.torovoro.kernel.Events.Tools;
 
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -28,7 +28,7 @@ public class DoubleJumpCheck implements Listener {
 
         Player player = event.getPlayer();
 
-        if (player.getGameMode() != GameMode.CREATIVE && player.getLocation().subtract(0.0, 1.0, 0.0).getBlock().getType() != Material.AIR && !player.isFlying()) {
+        if (player.getGameMode() != GameMode.CREATIVE && player.getLocation().subtract(0.0, 2.0, 0.0).getBlock().getType() != Material.AIR && !player.isFlying()) {
             player.setAllowFlight(true);
         }
     }
