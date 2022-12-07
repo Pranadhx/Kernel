@@ -15,7 +15,7 @@ public class PrimedTNT implements Listener {
 
         boolean tnt_explosions = plugin.getConfig().getBoolean("tnt_explosions");
 
-        if(tnt_explosions == true) {
+        if(tnt_explosions) {
             return;
         }
         event.blockList().clear();

@@ -16,6 +16,7 @@ public final class Kernel extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new LaunchPad(), this);
         getServer().getPluginManager().registerEvents(new ScoreboardInitialize(), this);
         getServer().getPluginManager().registerEvents(new DashSword(), this);
+        getServer().getPluginManager().registerEvents(new PrimedTNT(), this);
         getServer().getPluginManager().registerEvents(new TNTRod(), this);
         getCommand("broadcast").setExecutor(new Broadcast());
         getCommand("clear").setExecutor(new ClearInventory());
