@@ -10,6 +10,8 @@ public final class Kernel extends JavaPlugin {
     @Override
     public void onEnable() {
         Bukkit.getLogger().info("Kernel has loaded.");
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new PlayerJoinLeave(), this);
         getServer().getPluginManager().registerEvents(new TemporaryTestHit(), this);
         getServer().getPluginManager().registerEvents(new LaunchPad(), this);
@@ -34,4 +36,5 @@ public final class Kernel extends JavaPlugin {
     public void onDisable() {
         Bukkit.getLogger().info("Kernel has unloaded.");
     }
+
 }

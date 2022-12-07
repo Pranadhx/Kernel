@@ -31,10 +31,10 @@ public class Fly implements CommandExecutor {
                         player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &7That player is not online or does not exist."));
                     } else if(p.getAllowFlight()) {
                         p.setAllowFlight(false);
-                        p.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#39ff14Flight &#585858is now &cdisabled."));
+                        player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#ccc695" + p.getDisplayName() + "'s &7flight is now &cdisabled."));
                     } else {
                         p.setAllowFlight(true);
-                        p.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#ccc695Flight &7is now &aenabled."));
+                        player.sendMessage(ColorUtils.translateColorCodes("&#968863&l* &#ccc695" + p.getDisplayName() + "'s &7flight is now &aenabled."));
                     }
                     return true;
                 }

@@ -29,10 +29,10 @@ public class Vanish implements CommandExecutor {
                         player.sendMessage("§6§l* §7That player is not online or does not exist.");
                     } else if(p.isInvisible()) {
                         p.setInvisible(false);
-                        p.sendMessage("§6§l* §eVisbility §7is now §cdisabled.");
+                        player.sendMessage("§6§l* §e" + p.getDisplayName() + "'s §7visbility is now §cdisabled.");
                     } else {
                         p.setInvisible(true);
-                        p.sendMessage("§6§l* §eVisbility §7is now §aenabled.");
+                        player.sendMessage("§6§l* §e" + p.getDisplayName() + "'s §7visbiility is now §aenabled.");
                     }
                     return true;
                 }
