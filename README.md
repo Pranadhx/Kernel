@@ -12,6 +12,9 @@ gradient is #FCE9B6 to #FFCE90
 - [ ] speed/god/heal/togglefalldamage command
 - [ ] hide player from tablist when vanished
 - [ ] think of a proper goal for this plugin
+- [ ] staff mode
+- [ ] kits gui
+- [ ] xp - pickup
 
 ## CANCELLED:
 
