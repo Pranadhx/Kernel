@@ -27,6 +27,8 @@ public class Weapon implements CommandExecutor {
         String dash_sword = plugin.getConfig().getString("dash_sword");
         String obtain_tnt = plugin.getConfig().getString("obtain_tnt");
         String tnt_rod = plugin.getConfig().getString("tnt_rod");
+        String obtain_doublejump_boots = plugin.getConfig().getString("obtain_doublejump_boots");
+        String doublejump_boots = plugin.getConfig().getString("doublejump_boots");
 
         if(command.getName().equalsIgnoreCase("weapon")) {
             if (sender instanceof Player) {
@@ -52,6 +54,7 @@ public class Weapon implements CommandExecutor {
                         player.getInventory().addItem(item);
                     }
                     if(args[0].equals("tnt")) {
+                        assert obtain_tnt != null;
                         player.sendMessage(ColorUtils.translateColorCodes(obtain_tnt));
                         ItemStack item = new ItemStack(Material.BLAZE_ROD);
                         ItemMeta meta = item.getItemMeta();
@@ -59,7 +62,22 @@ public class Weapon implements CommandExecutor {
                         meta.setUnbreakable(true);
                         meta.setCustomModelData(3);
                         List<String> lore = new ArrayList<>();
-                        lore.add(ColorUtils.translateColorCodes("&f&oThrow a primed TNT!"));
+                        lore.add(ColorUtils.translateColorCodes("&f&oShoot a TNT Gun!"));
+                        lore.add("");
+                        lore.add(ColorUtils.translateColorCodes("&#fbd333&lL&#f9cc2d&lE&#f6c626&lG&#f4bf20&lE&#f1b81a&lN&#efb113&lD&#ecab0d&lA&#eaa406&lR&#e79d00&lY"));
+                        meta.setLore(lore);
+                        item.setItemMeta(meta);
+                        player.getInventory().addItem(item);
+                    }
+                    if(args[0].equals("dj")) {
+                        player.sendMessage(ColorUtils.translateColorCodes(obtain_doublejump_boots));
+                        ItemStack item = new ItemStack(Material.CHAINMAIL_BOOTS);
+                        ItemMeta meta = item.getItemMeta();
+                        meta.setDisplayName(ColorUtils.translateColorCodes(doublejump_boots));
+                        meta.setUnbreakable(true);
+                        meta.setCustomModelData(3);
+                        List<String> lore = new ArrayList<>();
+                        lore.add(ColorUtils.translateColorCodes("&f&oJump like a kangaroo!"));
                         lore.add("");
                         lore.add(ColorUtils.translateColorCodes("&#fbd333&lL&#f9cc2d&lE&#f6c626&lG&#f4bf20&lE&#f1b81a&lN&#efb113&lD&#ecab0d&lA&#eaa406&lR&#e79d00&lY"));
                         meta.setLore(lore);

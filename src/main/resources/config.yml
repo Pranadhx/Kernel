@@ -14,6 +14,9 @@ dash_sword: "&#3ecdff&lD&#2fd4f0&lA&#1fdae1&lS&#10e1d1&lH &#00e7c2&lS&#40edd1&lW
 obtain_dash: "&#968863&l* &7You have received the &#3ecdff&lD&#2fd4f0&lA&#1fdae1&lS&#10e1d1&lH &#00e7c2&lS&#40edd1&lW&#80f3e1&lO&#bff9f0&lR&#ffffff&lD!"
 tnt_rod: "&#ff0000&lT&#f53f00&lN&#ec7e00&lT &#ecb133&lR&#f5d899&lO&f&lD"
 obtain_tnt: "&#968863&l* &7You have received the &#ff0000&lT&#f53f00&lN&#ec7e00&lT &#ecb133&lR&#f5d899&lO&f&lD!"
+doublejump_boots: "&f&lDOUBLEJUMP BOOTS"
+obtain_doublejump_boots: "&#968863&l* &7You have received the &f&lDOUBLEJUMP BOOTS!"
+equip_doublejump_boots: "&#968863&l* &7You have equipped the &f&lDOUBLEJUMP BOOTS."
 
 player_not_exist: "&#968863&l* &7That player is not online or does not exist."
 

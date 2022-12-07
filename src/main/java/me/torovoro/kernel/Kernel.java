@@ -4,6 +4,7 @@ import me.torovoro.kernel.Commands.*;
 import me.torovoro.kernel.Events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import com.jeff_media.armorequipevent.ArmorEquipEvent;
 
 public final class Kernel extends JavaPlugin {
 
@@ -18,6 +19,8 @@ public final class Kernel extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new DashSword(), this);
         getServer().getPluginManager().registerEvents(new PrimedTNT(), this);
         getServer().getPluginManager().registerEvents(new TNTRod(), this);
+        getServer().getPluginManager().registerEvents(new DoubleJumpCheck(), this);
+        getServer().getPluginManager().registerEvents(new DoubleJumpBoots(), this);
         getCommand("broadcast").setExecutor(new Broadcast());
         getCommand("clear").setExecutor(new ClearInventory());
         getCommand("level").setExecutor(new Levels());
@@ -33,6 +36,7 @@ public final class Kernel extends JavaPlugin {
         getCommand("kernel").setExecutor(new Help());
         getCommand("clearchat").setExecutor(new ClearChat());
         getCommand("weapon").setExecutor(new Weapon());
+        ArmorEquipEvent.registerListener(this);
     }
 
     @Override
