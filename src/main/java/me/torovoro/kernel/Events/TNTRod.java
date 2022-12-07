@@ -24,7 +24,7 @@ public class TNTRod implements Listener {
         Player player = event.getPlayer();
         if(!event.getAction().isRightClick() | !event.getHand().equals(EquipmentSlot.HAND))
             return;
-        if(!event.getItem().getType().equals(Material.LIGHTNING_ROD))
+        if(!event.getItem().getType().equals(Material.BLAZE_ROD))
             return;
         if(event.getItem().getItemMeta().getCustomModelData() != 3)
             return;

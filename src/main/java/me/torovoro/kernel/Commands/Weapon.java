@@ -22,6 +22,7 @@ public class Weapon implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
+        String weapon_usage = plugin.getConfig().getString("weapon_usage");
         String obtain_dash = plugin.getConfig().getString("obtain_dash");
         String dash_sword = plugin.getConfig().getString("dash_sword");
         String obtain_tnt = plugin.getConfig().getString("obtain_tnt");
@@ -31,7 +32,7 @@ public class Weapon implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 if(args.length < 1) {
-                    player.sendMessage("§6§l* §7Usage: §e/weapon (weapon)");
+                    player.sendMessage(ColorUtils.translateColorCodes(weapon_usage));
                     return true;
                 } else if (args.length == 1) {
                     if(args[0].equals("dash")) {
@@ -52,7 +53,7 @@ public class Weapon implements CommandExecutor {
                     }
                     if(args[0].equals("tnt")) {
                         player.sendMessage(ColorUtils.translateColorCodes(obtain_tnt));
-                        ItemStack item = new ItemStack(Material.LIGHTNING_ROD);
+                        ItemStack item = new ItemStack(Material.BLAZE_ROD);
                         ItemMeta meta = item.getItemMeta();
                         meta.setDisplayName(ColorUtils.translateColorCodes(tnt_rod));
                         meta.setUnbreakable(true);
@@ -65,11 +66,14 @@ public class Weapon implements CommandExecutor {
                         item.setItemMeta(meta);
                         player.getInventory().addItem(item);
                     }
+                } else if (args.length > 1) {
+                    player.sendMessage(ColorUtils.translateColorCodes(weapon_usage));
+                    return true;
+                }
             }
+            return true;
         }
         return true;
-    }
-        return false;
     }
 }
 

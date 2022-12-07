@@ -9,9 +9,9 @@ clear_other: "&#968863&l* &#ccc695{player}'s &7inventory has been &#ccc695cleare
 
 clearchat_message: "&#968863&l* &7The &#ccc695chat &7has been &#ccc695cleared &7by &#ccc695{player}!"
 
+weapon_usage: "&#968863&l* &7Usage: &#ccc695/weapon (weapon)"
 dash_sword: "&#3ecdff&lD&#2fd4f0&lA&#1fdae1&lS&#10e1d1&lH &#00e7c2&lS&#40edd1&lW&#80f3e1&lO&#bff9f0&lR&#ffffff&lD"
 obtain_dash: "&#968863&l* &7You have received the &#3ecdff&lD&#2fd4f0&lA&#1fdae1&lS&#10e1d1&lH &#00e7c2&lS&#40edd1&lW&#80f3e1&lO&#bff9f0&lR&#ffffff&lD!"
-
 tnt_rod: "&#ff0000&lT&#f53f00&lN&#ec7e00&lT &#ecb133&lR&#f5d899&lO&f&lD"
 obtain_tnt: "&#968863&l* &7You have received the &#ff0000&lT&#f53f00&lN&#ec7e00&lT &#ecb133&lR&#f5d899&lO&f&lD!"
 
