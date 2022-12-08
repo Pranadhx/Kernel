@@ -17,6 +17,8 @@ obtain_tnt: "&#968863&l* &7You have received the &#ff0000&lT&#f53f00&lN&#ec7e00&
 doublejump_boots: "&f&lDOUBLEJUMP BOOTS"
 obtain_doublejump_boots: "&#968863&l* &7You have received the &f&lDOUBLEJUMP BOOTS!"
 equip_doublejump_boots: "&#968863&l* &7You have equipped the &f&lDOUBLEJUMP BOOTS."
+obtain_grappling_hook: "&#968863&l* &7You have received the &e&lGRAPPLING HOOK!"
+grappling_hook: "&e&lGRAPPLING HOOK"
 
 player_not_exist: "&#968863&l* &7That player is not online or does not exist."
 

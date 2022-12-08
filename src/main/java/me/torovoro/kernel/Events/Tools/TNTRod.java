@@ -18,7 +18,7 @@ public class TNTRod implements Listener {
     Plugin plugin = Kernel.getPlugin(Kernel.class);
 
     @EventHandler
-    public void RodRightClick(PlayerInteractEvent event) {
+    public void rodRightClick(PlayerInteractEvent event) {
 
         int tnt_explosion_ticks = plugin.getConfig().getInt("tnt_explosion_ticks");
 

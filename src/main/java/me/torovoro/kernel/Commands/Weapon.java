@@ -29,6 +29,8 @@ public class Weapon implements CommandExecutor {
         String tnt_rod = plugin.getConfig().getString("tnt_rod");
         String obtain_doublejump_boots = plugin.getConfig().getString("obtain_doublejump_boots");
         String doublejump_boots = plugin.getConfig().getString("doublejump_boots");
+        String obtain_grappling_hook = plugin.getConfig().getString("obtain_grappling_hook");
+        String grappling_hook = plugin.getConfig().getString("grappling_hook");
 
         if(command.getName().equalsIgnoreCase("weapon")) {
             if (sender instanceof Player) {
@@ -78,6 +80,21 @@ public class Weapon implements CommandExecutor {
                         meta.setCustomModelData(3);
                         List<String> lore = new ArrayList<>();
                         lore.add(ColorUtils.translateColorCodes("&f&oJump like a kangaroo!"));
+                        lore.add("");
+                        lore.add(ColorUtils.translateColorCodes("&#fbd333&lL&#f9cc2d&lE&#f6c626&lG&#f4bf20&lE&#f1b81a&lN&#efb113&lD&#ecab0d&lA&#eaa406&lR&#e79d00&lY"));
+                        meta.setLore(lore);
+                        item.setItemMeta(meta);
+                        player.getInventory().addItem(item);
+                    }
+                    if(args[0].equals("grapple")) {
+                        player.sendMessage(ColorUtils.translateColorCodes(obtain_grappling_hook));
+                        ItemStack item = new ItemStack(Material.FISHING_ROD);
+                        ItemMeta meta = item.getItemMeta();
+                        meta.setDisplayName(ColorUtils.translateColorCodes(grappling_hook));
+                        meta.setUnbreakable(true);
+                        meta.setCustomModelData(3);
+                        List<String> lore = new ArrayList<>();
+                        lore.add(ColorUtils.translateColorCodes("&f&oThrow yourself into the air."));
                         lore.add("");
                         lore.add(ColorUtils.translateColorCodes("&#fbd333&lL&#f9cc2d&lE&#f6c626&lG&#f4bf20&lE&#f1b81a&lN&#efb113&lD&#ecab0d&lA&#eaa406&lR&#e79d00&lY"));
                         meta.setLore(lore);

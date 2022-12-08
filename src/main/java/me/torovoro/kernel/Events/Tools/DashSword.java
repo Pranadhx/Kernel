@@ -9,7 +9,7 @@ import org.bukkit.inventory.EquipmentSlot;
 
 public class DashSword implements Listener {
     @EventHandler
-    public void SwordRightClick(PlayerInteractEvent event) {
+    public void dashRightClick(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         if(!event.getAction().isRightClick() | !event.getHand().equals(EquipmentSlot.HAND))
             return;
