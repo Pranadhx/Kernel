@@ -21,6 +21,8 @@ public final class Kernel extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new TNTRod(), this);
         getServer().getPluginManager().registerEvents(new DoubleJumpBoots(), this);
         getServer().getPluginManager().registerEvents(new GrapplingHook(), this);
+        getServer().getPluginManager().registerEvents(new TeleportBow(), this);
+        getServer().getPluginManager().registerEvents(new EXPBottleBreak(), this);
 
         getCommand("broadcast").setExecutor(new Broadcast());
         getCommand("clear").setExecutor(new ClearInventory());
