@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
@@ -47,6 +48,7 @@ public class Weapon implements CommandExecutor {
                         meta.setDisplayName(ColorUtils.translateColorCodes(dash_sword));
                         meta.setUnbreakable(true);
                         meta.setCustomModelData(3);
+                        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                         List<String> lore = new ArrayList<>();
                         lore.add(ColorUtils.translateColorCodes("&f&oDash in the wind!"));
                         lore.add("");
@@ -78,6 +80,7 @@ public class Weapon implements CommandExecutor {
                         meta.setDisplayName(ColorUtils.translateColorCodes(doublejump_boots));
                         meta.setUnbreakable(true);
                         meta.setCustomModelData(3);
+                        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                         List<String> lore = new ArrayList<>();
                         lore.add(ColorUtils.translateColorCodes("&f&oJump like a kangaroo!"));
                         lore.add("");
